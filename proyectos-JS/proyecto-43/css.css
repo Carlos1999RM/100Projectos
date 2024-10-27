@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.layout__nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__btn {
+    display: none;
+    /* Oculto por defecto en pantallas grandes */
+}
+
+.nav__btn i {
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.nav__list {
+    list-style: none;
+    display: flex;
+    gap: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+.nav__list .list__name {
+    margin: 0;
+}
+
+.nav__list .list__link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.layout__main {
+    flex: 1;
+    padding: 2em;
+    background-color: #f4f4f4;
+}
+
+.main__article {
+    background-color: white;
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article__container-img {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.article-img {
+    max-width: 80%;
+    height: 200px;
+    /* Ajusta esta altura según tu preferencia */
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.article__title {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.article__description {
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .nav__btn {
+        display: block;
+        /* Mostrar en pantallas pequeñas */
+    }
+
+    .nav__list {
+        display: none;
+        /* Oculto por defecto en pantallas pequeñas */
+        flex-direction: column;
+        gap: 0;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        width: 100%;
+    }
+
+    .nav__list .list__name {
+        border-bottom: 1px solid #444;
+    }
+
+    .nav__list .list__link {
+        padding: 1em;
+        display: block;
+    }
+
+    .nav__list.show {
+        display: flex;
+        /* Mostrar el menú cuando se active */
+    }
+}

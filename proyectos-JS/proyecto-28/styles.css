@@ -1,0 +1,71 @@
+html {
+    font-size: 10px;
+    height: 100%;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+}
+
+.layout__main {
+    width: 100%;
+    min-height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main__background {
+    content: "";
+    width: calc(100% + 4rem);
+    height: calc(100% + 4rem);
+    position: absolute;
+    z-index: -1;
+    filter: blur(3rem);
+    background-image: url(Tanque.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.load__number {
+    font-size: 7rem;
+    font-weight: bold;
+    color: aliceblue;
+    text-align: center;
+    text-shadow: 0 0 1rem black;
+
+}
+
+.load__btn {
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: rgb(63, 88, 25);
+    color: white;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.load__btn:hover {
+    background-color: darkolivegreen;
+}
+
+.load__complete {
+    display: block;
+    color: darkkhaki;
+    font-weight: 600;
+    font-size: 3.5rem;
+    text-shadow: 0 0 1rem black;
+}

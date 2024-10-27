@@ -1,0 +1,43 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(36, 93, 143);
+}
+
+.layout__main {
+    width: 100rem;
+}
+
+.main__title {
+    margin-bottom: 4rem;
+}
+
+.main__stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.stars__star {
+    font-size: 6rem;
+    color: rgb(170, 53, 68);
+    cursor: pointer;
+}
+
+
+

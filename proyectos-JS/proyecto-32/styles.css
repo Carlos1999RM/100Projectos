@@ -1,0 +1,64 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+}
+
+.layout {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout__main {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main__slides {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.slides__item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    align-items: center;
+    background-color: rgb(29, 114, 86);
+    transition: all 500ms linear;
+}
+
+.slides__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main__next,
+.main__prev {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.main__text .fa-solid,
+.main__prev .fa-solid {
+    font-size: 13rem;
+    color: rgb(83, 83, 160);
+}

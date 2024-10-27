@@ -1,0 +1,21 @@
+body {
+    background-image: url(pattern-1.jpg);
+    background-repeat: repeat;
+}
+
+header {
+    border: 1px solid black;
+    background: lightblue;
+    padding: 10px;
+}
+
+h1 {
+    color: white;
+}
+
+h3 {
+    border: 3px solid teal;
+    background-color: tomato;
+    padding: 10px;
+    color: aliceblue;
+}

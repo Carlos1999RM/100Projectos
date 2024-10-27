@@ -1,0 +1,107 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+    overflow-x: hidden;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.layout__main {
+    width: 50rem;
+}
+
+.main__title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.main__form {
+    width: 100%;
+}
+
+.form__input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(21, 8, 34);
+    padding: 1.5rem;
+    border-radius: 5px;
+    margin-bottom: 4rem;
+    color: aliceblue;
+    font-weight: 600;
+}
+
+.form__input::placeholder {
+    color: antiquewhite;
+}
+
+.form__list {
+    list-style: none;
+    border-radius: 5px;
+}
+
+.list__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid rgb(14, 8, 20);
+    background-color: rgb(18, 3, 32);
+    color: aliceblue;
+    transition: all 300ms ease;
+}
+
+.list__task {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.task__check {
+    width: 2rem;
+    height: 2rem;
+    background-color: beige;
+    border-radius: 50%;
+    border: none;
+    appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.task__check:checked {
+    background-image: url(black-check-mark-icon-tick-symbol-in-black-color-illustration-for-web-mobile-and-concept-design-free-vector.jpg);
+    background-size: contain;
+}
+
+.task__text {
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 300ms linear;
+}
+
+.list__delete {
+    color: aliceblue;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    transition: all 300ms linear;
+}
+
+.list__delete:hover {
+    background-color: #444;
+}

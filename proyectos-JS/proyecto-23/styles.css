@@ -1,0 +1,70 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.6rem;
+}
+
+.layout {
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout__main {
+    position: relative;
+    width: 60rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid #ccc;
+    border-radius: 0.5rem;
+    transition: all 300ms linear;
+}
+
+.main__input {
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.main__icons {
+    flex-basis: 10%;
+}
+
+.icons__check,
+.icons__xmark {
+    position: absolute;
+    margin-top: 0.9rem;
+    margin-left: 1rem;
+    font-size: 3rem;
+    opacity: 0;
+    transition: all 300ms linear;
+}
+
+.icons__check {
+    color: #6DC06D;
+}
+
+.icons__xmark {
+    color: #f95d5d;
+}
+
+.focus {
+    border-color: black;
+}
+
+.show {
+    opacity: 0;
+}

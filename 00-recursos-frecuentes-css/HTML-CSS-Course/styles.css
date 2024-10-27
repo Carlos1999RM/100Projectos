@@ -1,0 +1,49 @@
+h1 {
+    font-family: sans-serif;
+    color: rgb(168, 104, 58);
+    font-style: italic;
+    font-weight: unset;
+}
+h2 {
+    font-family: sans-serif;
+    color: rgb(196, 141, 103);
+    font-style: italic;
+    font-weight: unset;
+}
+h3 {
+    font-family: sans-serif;
+    color: rgb(72, 117, 201);
+    font-style: italic;
+    font-weight: unset;
+}
+h4 {
+    font-family: sans-serif;
+    color: rgb(143, 135, 25);
+    font-style: italic;
+    font-weight: unset;
+}
+h5 {
+    font-family: sans-serif;
+    color: darkorchid;
+    font-style: italic;
+    font-weight: unset;
+}
+h6 {
+    font-family: sans-serif;
+    color: rgb(56, 110, 56);
+    font-style: italic;
+    font-weight: unset;
+}
+
+.lepanto1 {
+    font-family: monospace;
+    color: cadetblue;
+    font-size: x-large;
+    border: inset;
+}
+
+#lepanto2 {
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(145, 22, 47);
+    border: inset;
+}

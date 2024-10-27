@@ -1,0 +1,60 @@
+"use strict";
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  // Variables para contadores de minutos y segundos
+  let cronoMin = document.querySelector(".crono__min");
+  let cronoSec = document.querySelector(".crono__sec");
+
+  // Variables selección botones
+  let btnStart = document.querySelector(".layout__btn-start");
+  let btnStop = document.querySelector(".layout__btn-stop");
+
+  // Variables cuenta  minutos y segundos
+  let minutes = 0;
+  let seconds = 0;
+  let time = null;
+
+  // Función para iniciar cronómetro
+  let start = () => {
+    if (!time) {
+      time = setInterval(() => {
+        seconds++;
+
+        if (seconds == 60) {
+          minutes++;
+          seconds = 0;
+        }
+
+        if (minutes >= 60) {
+          alert("Has excedido el tiempo límite de 60 minutos");
+          clearInterval(time);
+        }
+
+        if (seconds < 10) {
+          cronoSec.innerHTML = "0" + seconds;
+        } else {
+          cronoSec.innerHTML = seconds;
+        }
+
+        if (minutes < 10) {
+          cronoMin.innerHTML = "0" + minutes;
+        } else {
+          cronoMin.innerHTML = minutes;
+        }
+      }, 1000);
+    }
+  };
+
+  // Botón iniciar
+  btnStart.addEventListener("click", () => {
+    start();
+  });
+
+  // Botón parar
+  btnStop.addEventListener("click", () => {
+    if (time) {
+      clearInterval(time);
+      time = null;
+    }
+  });
+});

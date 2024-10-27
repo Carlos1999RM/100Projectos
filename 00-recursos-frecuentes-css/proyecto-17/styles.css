@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+}
+
+.articulo {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    padding: 20px;
+    background-color: aquamarine;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}

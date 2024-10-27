@@ -1,0 +1,135 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Layout styles */
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Navigation styles */
+.layout__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #4A90E2;
+    position: relative;
+    z-index: 10;
+}
+
+.nav__btn {
+    cursor: pointer;
+}
+
+.btn__close,
+.btn__open {
+    color: white;
+    font-size: 2rem;
+}
+
+/* Main content styles */
+.layout__pages {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.pages__page {
+    display: none;
+    padding: 2rem;
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.page--active {
+    display: block;
+    opacity: 1;
+}
+
+.page__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* List styles */
+.layout__list {
+    display: none;
+    background-color: #164172;
+    list-style: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    z-index: 5;
+    width: 100%;
+    max-width: 200px;
+}
+
+.layout__list--show {
+    display: flex;
+}
+
+.list__item {
+    padding: 1rem;
+    color: white;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.list__item:hover {
+    background-color: #184e85;
+    transform: scale(1.05);
+}
+
+/* Background images with color overlay */
+.page--home {
+    background-image: url(img/articulo-1.jpg);
+}
+
+.page--contact {
+    background-image: url(img/articulo-2.jpg);
+}
+
+.page--courses {
+    background-image:  url(img/articulo-3.jpg);
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .layout {
+        flex-direction: row;
+    }
+
+    .layout__nav {
+        justify-content: flex-start;
+        flex-direction: column;
+        align-items: center;
+        width: 200px;
+    }
+
+    .layout__list {
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+    }
+
+    .nav__btn {
+        display: none;
+    }
+}
